@@ -33,13 +33,13 @@ function calculateProfitAndLoss(initialPrice, qunatity, currentPrice){
         // loss
         let loss = (initialPrice - currentPrice) * qunatity
         let lossPercentage = (loss / initialPrice) * 100;
-        outputText.textContent = `loss is of ₹${loss} and loss percentage is ${lossPercentage}%`;
+        outputText.textContent = `loss is of ₹${loss} and loss percentage is ${lossPercentage.toFixed(2)}%`;
     }
     else if(currentPrice > initialPrice){
         //profit
         let profit = (currentPrice - initialPrice) * qunatity
         let profitPercentage = (profit / initialPrice) * 100
-        outputText.textContent = `you have a profit of ₹${profit} and profit percentage is ${profitPercentage}%`;
+        outputText.textContent = `you have a profit of ₹${profit} and profit percentage is ${profitPercentage.toFixed(2)}%`;
     }
     else{
         outputText.textContent =  `no profit/ no loss`;
