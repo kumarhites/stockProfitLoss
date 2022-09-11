@@ -24,7 +24,7 @@ body{
     height: fit-content;
     width: 30%;
     margin-top: 150px;
-    margin-bottom: 150px;
+    /* margin-bottom: 150px; */
 }
 .nav{
     display: flex;
@@ -41,15 +41,13 @@ body{
     height: 44px;
     width: 44px;
 }
-/* #image{
-    height: 500px;
-    width: 500px;
-} */
 img{
     width: 100%;
     background-size: contain;
     border-radius: 10px;
     margin-bottom: 10px;
+    transition: all 1s ease;
+    
 }
 h1{
     margin: 10px 0px
@@ -104,7 +102,23 @@ body h3{
 #errText{
     color: #ff0b40;
 }
-
+.socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+}
+.socials > #foot-heading{
+    margin-bottom: 10px;
+}
+.socials ul{
+    display: flex;
+    gap: 2rem;
+}
+.socials ul li{
+    list-style: none;
+}
 @media only screen and (min-width : 1200) {
     .container{
         min-width: 50%;
