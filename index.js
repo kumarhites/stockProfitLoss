@@ -45,16 +45,16 @@ function addImage(filter){
 function calculateProfitAndLoss(initialPrice, quantity, currentPrice){
     if(initialPrice > currentPrice){
         // loss
-        let loss = (initialPrice - currentPrice) * quantity
-        let lossPercentage = (loss * 100)/ (initialPrice * quantity);
+        let loss = (initialPrice - currentPrice) * quantity;
+        let lossPercentage = (loss / initialPrice) * 100;
         outputText.textContent = `loss is of ₹${loss} and loss percentage is ${lossPercentage.toFixed(2)}%`;
-        outputText.style.color = "#ff0000"
+        outputText.style.color = "#ff0000";
         addImage("loss");
     }
     else if(currentPrice > initialPrice){
         //profit
-        let profit = (currentPrice - initialPrice) * quantity
-        let profitPercentage = (profit * 100) / (initialPrice * quantity)
+        let profit = (currentPrice - initialPrice) * quantity;
+        let profitPercentage = (profit / initialPrice) * 100;
         outputText.textContent = `you have a profit of ₹${profit} and profit percentage is ${profitPercentage.toFixed(2)}%`;
         outputText.style.color = "#33ff00";
         addImage("profit");
